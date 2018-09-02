@@ -50,6 +50,7 @@ body {
 .leftcolumn {   
     float: left;
     width: 75%;
+    padding: 20px; 
 }
 
 /* Right column */
@@ -64,14 +65,17 @@ body {
 .fakeimg {
     background-color: #aaa;
     width: 100%;
+    height: auto;
     padding: 20px;
 }
 
 /* Add a card effect for articles */
 .card {
     background-color: white;
+    height: 300px;
     padding: 20px;
     margin-top: 20px;
+    
 }
 
 /* Clear floats after the columns */
@@ -104,6 +108,11 @@ body {
         width: 100%;
     }
 }
+
+.img {
+    width: 75px;
+    height: auto;
+}
 </style>
 </head>
 <body>
@@ -122,50 +131,56 @@ body {
 
 <div class="row">
   <div class="leftcolumn">
-    <div class="card">
+    <div class="card" style="height:650px;">
       <h2>Whakapapa</h2>
-      <h5>Whakapapa</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Whakapapa</p>
-      <p>Information about our whakapapa.</p>
-    </div>
-    <div class="card">
-      <h2>Te Awhipera Millar-Aubrey</h2>
-      <h5>Blog description, date.</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Blog Heading</p>
-      <p>Blog information.</p>
-    </div>
-    <div class="card">
-        <h2>Mokopurangi raua ko Hariata Nepe</h2>
-        <h5>Blog description, date.</h5>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Blog Heading</p>
-        <p>Blog information.</p>
-      </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>Background Info</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some interesting info about our tipuna</p>
-    </div>
-    <div class="card">
-      <h3>Iwi Links</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
+      <div class="fakeimg" style="height:520px;">
+        <h2>He Whakapapa O Mokopurangi</h2>
+        <h3>Location: Aotea, Kawhia</h3>
+        <p>Whanau Position: Tuakana ki a Te Wherowhero</p>
+        <p>Description: Iwi Whawhai (renowned warrior)</p>
+        <h3>Following Generations:</h3>
+        <p>Tukotahi Turahi</p>
+        <p>Rangiira (m)</p>
+        <p>Karaka (m)</p>
+        <p>Hine Tara (f)</p>
+        <p>Te Tupetu (m)</p>
+        <p>Eruini Te Nepe (m)</p>
+        <p>Amiria (f)</p>
+        <p>Mangimangi (m)</p>
+      </div>  
     </div>
   </div>
+</div> 
+
+<div class="row">
+        <div class="leftcolumn">
+          <div class="card" style="height:800px">
+            <h2>Te Awhipera</h2>
+                <div class="fakeimg" style="height:550px;">
+                        <img src="../photos/Te Awhipera Millar-Aubrey.jpg" width="400" height="500">
+            </div>
+            
+            <p><strong>Te Awhipera was the daughter of Hinerangi Mahuta of Ngāti Koroki Kahukura, Maungatautari. Te Awhipera married 1st husband, a Millar and later her 2nd husband an Aubrey. Te Awhipera had a son to Aubrey, his name was Paora Aubrey. It is said that Te Awhipera was disowned by her whānau because she married two pākehā. Te Awhipera was the daughter of a high chief who had close ties with the kingitanga. Te Awhipera died at Taupiri at the age of 104.</strong></p>
 </div>
 
-<div class="footer">
-    <h2>&copy Cameron Nepe</h2>
-</div>
+<div class="row">
+        <div class="leftcolumn">
+          <div class="card" style="height:700px">
+            <h2>Mokopurangi Nepe</h2>
+                <div class="fakeimg" style="height:450px;">
+                        <img src="../photos/MokopurangiNepe.jpg" width="400" height="400">
+                </div>
+            
+            <p><strong>Born in the Waikato, the second of three sons, Mokopurangi descends from the eldest brother of Te Wherowhero the 1st Māori King. Mokopurangi was arranged to be married to  the princess Te Puea Herangi, however, he avoided this by moving to the East Coast. Mokopurangi eventually married Hariata Te Iri of Ngāti Porou. They had 6 sons and 2 daughters. He was also a successful business man apparently owning most of the shops in Ruatoria.</strong></p>
+          </div>
+        </div>
+</div>  
+
+
+    
+<div class="footer" style="width:1850px">
+        <h2>&copy Cameron Nepe</h2>
+    </div>
 
 </body>
 </html>
