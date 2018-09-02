@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>NEPE WHANAU</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
 }
 
 /* Style the top navigation bar */
@@ -37,37 +45,208 @@ body {
     color: black;
 }
 
-/* Style the content */
-.content {
-    background-color: #ddd;
-    padding: 10px;
-    height: 200px; /* Should be removed. Only for demonstration */
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
 }
 
-/* Style the footer */
-.footer {
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
     background-color: #f1f1f1;
-    padding: 10px;
+    padding-left: 20px;
 }
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
 </style>
 </head>
 <body>
 
-    <div class="topnav">
-        <a href="#">TIPUNA</a>
-        <a href="#">MOKO</a>
-        <a href="#">WHANAU</a>
-        <a href="#">WHAKAPAPA</a>
-        <a href="#">WHANAUNGATANGA</a>
-      </div>
+<div class="header">
+  <h1>WHAKAWHANAUNGATANGA</h1>
+  <p>Nau mai haere mai ki te whanau pae tukutuku</p>
+</div>
 
-<div class="content">
-  <h2>Whakawhanungatanga</h2>
-  <p>A topnav, content and a footer.</p>
+<div class="topnav">
+  <a href="./index.html">Kainga</a>
+  <a href="./tipuna.html">Tipuna</a>
+  <a href="./whanau.html">Whanau</a>
+  <a href="./whanaungatanga.html">Whanungatanga</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Kia ora te whanau</h2>
+      <h5>Whakawhanaungatanga</h5>
+      <p>Please leave us a "how we are related" comment in our form.</p>
+      <div class="container">
+        <form action="/action_page.php">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Comment</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" placeholder="How are we related?" style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About us</h2>
+      
+      <p>Our whanau..</p>
+    </div>
+    <div class="card">
+      <h3>Latest Whanau blogs</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
 </div>
 
 <div class="footer">
-  <p>Footer</p>
+  <h2>&copy Cameron Nepe</h2>
 </div>
 
 </body>

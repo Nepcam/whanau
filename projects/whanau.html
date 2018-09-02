@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>NEPE WHANAU</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
 }
 
 /* Style the top navigation bar */
@@ -37,37 +45,182 @@ body {
     color: black;
 }
 
-/* Style the content */
-.content {
-    background-color: #ddd;
-    padding: 10px;
-    height: 200px; /* Should be removed. Only for demonstration */
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
 }
 
-/* Style the footer */
-.footer {
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
     background-color: #f1f1f1;
-    padding: 10px;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 </style>
 </head>
 <body>
 
-    <div class="topnav">
-        <a href="#">KAINGA</a>
-        <a href="#">TIPUNA</a>
-        <a href="#">WHANAU</a>
-        <a href="#">WHAKAPAPA</a>
-        <a href="#">WHANAUNGATANGA</a>
-      </div>
+<div class="header">
+  <h1>WHANAU</h1>
+  <p>Nau mai haere mai ki te whanau pae tukutuku</p>
+</div>
 
-<div class="content">
-  <h2>Whanau</h2>
-  <p>A topnav, content and a footer.</p>
+<div class="topnav">
+  <a href="./index.html">Kainga</a>
+  <a href="./tipuna.html">Tipuna</a>
+  <a href="./whanau.html">Whanau</a>
+  <a href="./whanaungatanga.html">Whanungatanga</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn" style="width: 100%">
+    <div class="card">
+      <h2>Nga Uri o Mokopurangi raua ko Hariata Nepe</h2>
+      <div class="fakeimg" style="height:400px;">
+        <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="./whanau.html">
+                <img src="../photos/harry.jpg" width="600" height="400">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+          
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_forest.jpg">
+                <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_lights.jpg">
+                <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+          
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_mountains.jpg">
+                <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <p>Blog heading.</p>
+      <p>Opening blog. Information about the website.</p>
+    </div>
+    
+  </div>
+  
+  </div>
 </div>
 
 <div class="footer">
-  <p>Footer</p>
+    <h2>&copy Cameron Nepe</h2>
 </div>
 
 </body>
