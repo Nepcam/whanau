@@ -1,0 +1,14 @@
+{
+  "name": "personal-project-cam",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Nepcam/whanau.git",
+  "author": "nepcam <cameron.nepe@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dev": "^0.1.3",
+    "http": "^0.0.0",
+    "socket-io": "^1.0.0",
+    "webpack": "^4.18.0"
+  }
+}
