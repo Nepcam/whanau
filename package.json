@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "bulma": "^0.7.2",
-    "express": "^4.16.2"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
